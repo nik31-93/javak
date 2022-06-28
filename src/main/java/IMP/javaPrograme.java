@@ -1,5 +1,4 @@
 package IMP;
-
 public class javaPrograme {
 	static String name="urmmillaa";
 	static int value=121345569;
