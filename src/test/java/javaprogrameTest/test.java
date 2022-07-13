@@ -9,7 +9,7 @@ public class test extends javaPrograme{
 	private static javaPrograme jp;
 	@AfterMethod
 	public void endTest(){
-		System.out.println("---------");
+		System.out.println("--------------");
 	}
 	
 	@Test(priority=1)

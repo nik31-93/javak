@@ -13,7 +13,6 @@ public class javaPrograme {
 			b = c;
 			System.out.println(a);	
 		}
-	
 	}
 	
 	public void Factorial () {
@@ -37,7 +36,7 @@ public class javaPrograme {
 				if (array[i] > array[j]) 
 				{
 					temp = array[i];	//		a=b		25
-					array[i] = array[j];//		b=c		15
+					array[i] = array[j];    //		b=c		15
 					array[j] = temp;	//		c=a		25
 				}
 			}
@@ -103,12 +102,10 @@ public class javaPrograme {
 	}
 	
 	public void Removeduplicatearray() {
-String str = "Hello World!!";
+		String str = "Hello World!!";
 		
 		int a = 0;//1,2,3,4
-		
 		char[] xyz = str.toCharArray();
-
 		for (int i = 0; i < str.length(); i++) 
 		{
 			for (int j = i + 1; j < str.length(); j++) 
