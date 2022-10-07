@@ -3,7 +3,7 @@ package javaprogrameTest;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-import IMP.javaPrograme;
+import imp.javaPrograme;
 
 public class test extends javaPrograme{
 	private static javaPrograme jp;

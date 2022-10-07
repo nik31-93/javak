@@ -1,18 +1,21 @@
-package IMP;
+package imp;
+
+import java.lang.System.Logger;
 
 public class javaPrograme {
 	static String name="urmmillaa";
 	static int value=121345569;
 	
-	public void Fabonacci () {
-		int a = 10;
-		int b = 11;
+	public int Fabonacci() {
+		int a = 0;//1
+		int b = 1;//2
 		for (int i = 0; i < 10; i++) {
-			int c = a + b;
-			a = b;
-			b = c;
-			System.out.println(a);	
+			int c = a + b;//2
+			a = b;//1
+			b = c;//2
+			
 		}
+		return a;
 	}
 	
 	public void Factorial () {
@@ -26,8 +29,9 @@ public class javaPrograme {
 	}
 		
 	public void Find2nd_large_smallnum () {		
-		int temp, size;
-		int array[] = { 25, 200, 15, 63, 100, 96, 57 };
+		int temp;
+		int size;
+		int[] array = { 25, 200, 15, 63, 100, 96, 57 };
 		size= array.length;
 		for (int i = 0; i < size; i++) 
 		{					
@@ -85,11 +89,12 @@ public class javaPrograme {
 	}
 	
 	public void Prime_number () {
-		int i,j;	
+		int i;
+		int j;	
 		for  (i=0;i<=100;i++)
 		{		
 			int a=0;//1,2
-			for (j=i;j>=1;j--)
+			for (j=i+1;j>=1;j--)
 				{
 				if(i%j==0) {//0%1=
 					a=a+1;		
@@ -122,31 +127,36 @@ public class javaPrograme {
 	}
 	
 	public void Seperatenumcharsym() {
-		String Number = "";
-		String Alphabate = "";
-		String Scharacter = "";
-
+		StringBuilder bld1 = new StringBuilder();
+		String number = null;
+		StringBuilder bld2 = new StringBuilder();
+		String alphabate = null;
+		StringBuilder bld3 = new StringBuilder();
+		String scharacter = null;
 		String abc = "goo12^gle.1$2_34@gmail.com";
 		int num = abc.length();
 		for (int i = 0; i < num; i++) {
 			char ch = abc.charAt(i);
 			if (Character.isDigit(ch)) 
 			{
-				Number = Number + ch;
+				bld1.append(ch);
+				number = bld1.toString();
 			} 
 			
 			else if (Character.isLetter(ch)) 
 			{
-				Alphabate = Alphabate + ch;
+				bld2.append(ch);
+				alphabate = bld1.toString();
 			} 
 			
 			else {
-				Scharacter = Scharacter + ch;
+				bld3.append(ch);
+				scharacter = bld1.toString();
 			}
 		}
-		System.out.println(Number);
-		System.out.println(Alphabate);
-		System.out.println(Scharacter);
+		System.out.println(number);
+		System.out.println(alphabate);
+		System.out.println(scharacter);
 	}
 	
 	public void String_Palindrome() {
@@ -161,21 +171,22 @@ String palindrome1 = "abcdcba";
 		int a1 = palindrome1.length() - 1;
 		System.out.println(a1);
 		for (int i = a1; i >= 0; i--) {
-			System.out.print(palindrome1.charAt(i));			
-		}System.out.println(" ");
+			System.out.println(palindrome1.charAt(i));			
+		} System.out.println(" ");
 		
 		int a2 = a.length() - 1;
 		System.out.println(a2);
 		for (int i = a2; i >= 0; i--) {
-			System.out.print(a.charAt(i));
+			System.out.println(a.charAt(i));
 		}System.out.println(" ");
 		
 		int a3 = palindrome3.length() - 1;
 		System.out.println(a1);
 		for (int i = a3; i >= 0; i--) {
-			System.out.print(palindrome3.charAt(i));
+			System.out.println(palindrome3.charAt(i));
 		}
 	}
+
 	
 	public void String_Reverse() {
 		String abc = "stringname";
@@ -184,7 +195,7 @@ String palindrome1 = "abcdcba";
 		int a = abc.length() - 1;
 		System.out.println(a);
 		for (int i = a; i >= 0; i--) {
-			System.out.print(abc.charAt(i));
+			System.out.println(abc.charAt(i));
 		}
 	}
 
